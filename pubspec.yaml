@@ -1,6 +1,7 @@
 name: custom_pdfrx
 description: pdfrx is a rich and fast PDF viewer implementation built on the top of PDFium. The plugin supports Android, iOS, Windows, macOS, Linux, and Web.
 version: 1.0.0
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
