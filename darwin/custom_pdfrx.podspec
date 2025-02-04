@@ -5,15 +5,15 @@
 lib_tag = 'pdfium-apple-v9'
 
 Pod::Spec.new do |s|
-  s.name             = 'pdfrx'
+  s.name             = 'custom_pdfrx'
   s.version          = '0.0.3'
   s.summary          = 'Yet another PDF renderer for Flutter using PDFium.'
   s.description      = <<-DESC
   Yet another PDF renderer for Flutter using PDFium.
                        DESC
-  s.homepage         = 'https://github.com/espresso3389/pdfrx'
+  s.homepage         = 'https://github.com/krishnapalsendhav/custom-pdfrx.git'
   s.license          = { :type => 'BSD', :file => '../LICENSE' }
-  s.author           = { 'Takashi Kawasaki' => 'espresso3389@gmail.com' }
+  s.author           = { 'Krishnapal Sendhav' => 'krishnapalsendhav591@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
 
