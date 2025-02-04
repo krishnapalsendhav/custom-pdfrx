@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project-level configuration.
-set(PROJECT_NAME "pdfrx")
+set(PROJECT_NAME "custom_pdfrx")
 project(${PROJECT_NAME} LANGUAGES CXX)
 
 # Determine target processor name
