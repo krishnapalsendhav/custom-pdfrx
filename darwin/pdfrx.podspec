@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = 'https://github.com/espresso3389/pdfrx'
   s.license          = { :type => 'BSD', :file => '../LICENSE' }
-  s.author           = { 'Takashi Kawasaki' => 'espresso3389@gmail.com' }
+  s.author           = { 'Krishnapal Sendahv' => 'krishnapalsendhav591@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
 
