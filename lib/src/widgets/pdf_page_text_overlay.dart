@@ -739,6 +739,16 @@ class _PdfTextRenderBox extends RenderBox
     //   return;
     // }
   }
+
+  @override
+  // TODO: implement contentLength
+  int get contentLength => throw UnimplementedError();
+
+  @override
+  SelectedContentRange? getSelection() {
+    // TODO: implement getSelection
+    throw UnimplementedError();
+  }
 }
 
 extension _PdfTextRangeListExt on List<PdfTextRange> {
