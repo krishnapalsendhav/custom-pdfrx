@@ -14,3 +14,8 @@ set_target_properties(pdfrx PROPERTIES
 )
 
 target_compile_definitions(pdfrx PUBLIC DART_SHARED_LIB)
+
+if (ANDROID)
+  # Support Android 15 16k page size.
+  target_link_options(pdfrx PRIVATE "-Wl,-z,max-page-size=16384")
+endif()
