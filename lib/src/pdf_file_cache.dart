@@ -405,25 +405,26 @@ Future<PdfDocument> pdfDocumentFromUri(
 
     return await PdfDocument.openCustom(
       read: (buffer, position, size) async {
+        final c = cache!;
         final totalSize = size;
         final end = position + size;
         int bufferPosition = 0;
         for (int p = position; p < end;) {
-          final blockId = p ~/ cache!.blockSize;
-          final isAvailable = cache.isCached(blockId);
+          final blockId = p ~/ c.blockSize;
+          final isAvailable = c.isCached(blockId);
           if (!isAvailable) {
             await _downloadBlock(
               httpClient,
               uri,
-              cache,
+              c,
               progressCallback,
               blockId,
               headers: headers,
             );
           }
-          final readEnd = min(p + size, (blockId + 1) * cache.blockSize);
+          final readEnd = min(p + size, (blockId + 1) * c.blockSize);
           final sizeToRead = readEnd - p;
-          await cache.read(buffer, bufferPosition, p, sizeToRead);
+          await c.read(buffer, bufferPosition, p, sizeToRead);
           p += sizeToRead;
           bufferPosition += sizeToRead;
           size -= sizeToRead;
